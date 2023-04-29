@@ -55,8 +55,8 @@ class ShowImages extends Component {
         showLoadMoreButton: true,
         isSubmitted: true,
       }));
-    } catch (err) {
-      this.setState({ error: err });
+    } catch (error) {
+      this.setState({ error: error });
     } finally {
       this.setState({ isLoading: false });
     }

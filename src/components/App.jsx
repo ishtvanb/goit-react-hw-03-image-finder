@@ -4,8 +4,6 @@ import ShowImages from './ShowImages';
 import ScrollToTop from 'react-scroll-up';
 import Container from './Container';
 import { ToastContainer } from 'react-toastify';
-import Layout from './Layout/Layout';
-
 export default class App extends Component {
   state = {
     query: '',
@@ -19,7 +17,6 @@ export default class App extends Component {
     return (
       <>
         <Searchbar onSubmit={this.handleFormSubmit} />
-        <Layout>
           <Container>
             <ShowImages query={this.state.query} />
             <ScrollToTop
@@ -33,9 +30,8 @@ export default class App extends Component {
             >
               <span>UP</span>
             </ScrollToTop>
-            <ToastContainer autoClose={1000} />
+            <ToastContainer autoClose={1500} />
           </Container>
-        </Layout>
       </>
     );
   }
